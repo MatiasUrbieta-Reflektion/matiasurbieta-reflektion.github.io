@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+    <head >
+        <script>
+    var BASE_URL = 'https://www.reeds.com/';
+    var require = {
+        "baseUrl": "https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US"
+    };
+</script>
+        <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEAVFdWCxABUlBaBAMCXlI=",licenseKey:"08bb212b3e",applicationID:"161832586"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(21),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(22),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return o.emit(n+"start",[t,a],c),c.then(function(t){return o.emit(n+"end",[null,t],c),t},function(t){throw o.emit(n+"end",[t],c),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);e.exports=o;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=o(h,m),v.traceContextStateHeader=i(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",c=1,s="",f="";return o+"@nr="+i+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(c.d.tk=i),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(19),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||c),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(21),c=t(22),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=o(l+e,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],18:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?s("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&s("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&s("lcp",[n[n.length-1]])}function i(t){if(t instanceof u&&!l){var e,n=Math.round(t.timeStamp);e=n>1e12?Date.now()-n:f.now()-n,l=!0,s("timing",["fi",n,{type:t.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,c,s=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),c=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),c.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<i.length;c++)o=i[c],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],20:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(o="Safari",i=s[1])}e.exports={agent:o,version:i,match:r}},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!l.aborted||i){t&&t(n,r,o);for(var a=e(o),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(21),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+b.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-b.offset}var c=(new Date).getTime(),s=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:c,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),s("mark",["firstbyte",c],null,"api");var E=0,R=t(23)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script>
+<meta name="title" content="&nbsp;  | REEDS Jewelers"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>&nbsp;  | REEDS Jewelers</title>
+<link  rel="stylesheet" type="text/css"  media="all" href="https://www.reeds.com/pub/static/_cache/merged/b8a1b2c1df34b14e3bcfd6cbf80487a2.min.css" />
+<link  rel="stylesheet" type="text/css"  media="screen and (min-width: 768px)" href="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/css/styles-l.min.css" />
+<link  rel="stylesheet" type="text/css"  media="print" href="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/css/print.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="https://www.reeds.com/pub/static/_cache/merged/39265be02c0872caee05f7ff3833c2c4.min.css" />
+<script  type="text/javascript"  src="https://www.reeds.com/pub/static/_cache/merged/526829d146719babcb3a23a1dc307275.min.js"></script>
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/fonts/opensans/light/opensans-300.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/fonts/opensans/regular/opensans-400.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/fonts/opensans/semibold/opensans-600.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/fonts/opensans/bold/opensans-700.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/fonts/Luma-Icons.woff2" />
+<link  rel="icon" type="image/x-icon" href="https://www.reeds.com/pub/media/favicon/stores/1/favicon.ico" />
+<link  rel="shortcut icon" type="image/x-icon" href="https://www.reeds.com/pub/media/favicon/stores/1/favicon.ico" />
+<meta data-rfkid="rfkid_meta">
+<!-- Anti-flicker snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-KN62G5B':true});</script>                    <!-- GOOGLE TAG MANAGER -->
+            <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Magento_GoogleTagManager/js/google-tag-manager": {
+                        "isCookieRestrictionModeEnabled": 0,
+                        "currentWebsite": 1,
+                        "cookieName": "user_allowed_save_cookie",
+                        "gtmAccountId": "GTM\u002DN3FQFS6",
+                        "storeCurrencyCode": "USD",
+                        "ordersData": []                    }
+                }
+            }
+            </script>
+            <!-- END GOOGLE TAG MANAGER -->
+            <!-- BEGIN GOOGLE VERIFICATION TAG -->
+<!-- END GOOGLE VERIFICATION TAG -->
+<!-- BEGIN GTAG GLOBAL TAG -->
+<!-- END GTAG GLOBAL TAG -->
+<script type="text/javascript" async="true" src="//50973483-prod.rfksrv.com/rfk/js/11213-50973483/init.js"></script>
+<script type="text/javascript">
+	// ShopRunner related settings
+	var _shoprunner_com = new Object();
+  	_shoprunner_com.enabled = 1;
+	_shoprunner_com.retailerID = "REEDS";
+    _shoprunner_com.loginValidationURL = "https://www.reeds.com//shoprunner/validateToken";
+ 	_shoprunner_com.environmentID = 2;
+</script>
+<script type="text/javascript">
+    require(['jquery','Shoprunner_Core/js/shoprunner_init'],function($){
+    	console.log("loaded");
+    });
+ </script>
+    <script>
+        var kData = {"url":"https:\/\/www.reeds.com\/reflektion-template.html","page_title":"&nbsp;  | REEDS Jewelers","page_type":"category","cart":{"phase":"SHOPPING","is_completed":false}};
+        var url = 'https://www.reeds.com/customer/get/cartdata/';
+        requirejs(['jquery'], function ($) {
+            if(url.trim().length < 1) {
+                return;
+            }
+            $.get(url, function(data) {
+                if(typeof data !== 'undefined' && typeof data.cart !== 'undefined') {
+                    var phase = kData.cart.phase;
+                    var isCompleted = kData.cart.is_completed;
+                    // Add cart data through ajax if not on order success page
+                    if(!isCompleted) {
+                        kData.cart = data.cart;
+                    }
+                    if(phase !== 'undefined') {
+                        kData.cart.phase = phase;
+                    }
+                    if(isCompleted !== 'undefined') {
+                        kData.cart.is_completed = isCompleted;
+                    }
+                }
+            });
+        });
+    </script>
+    </head>
+    <body data-container="body"
+          data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/images/loader-2.gif"}}'
+        class="cms-reflektion-template-html cms-page-view page-layout-1column">
+        <script type="text/x-magento-init">
+        {
+            "*": {
+                "addToCartModal": {
+                    "ajax": {
+                        "settings": {
+                            "url":"https://www.reeds.com/kadro/rest/getcartpopup/"
+                        }
+                    },
+                    "wasProductAddedSuccessfullyUrl": "https://www.reeds.com/kadro/wasProductAddedSuccessfully/"
+                }
+            }
+        }
+</script>    <div id="bss-cookie-notice">
+        <h4 class='cookie-title'>Cookie Notice</h4>
+        <p class ='cookie-content'>REEDS.com uses cookies to understand how you use our site and to improve your experience. To learn more, <a href="https://www.reeds.com/privacy-policy.html#cookies">click here</a>. By continuing to use our site, you accept our use of <a href="https://www.reeds.com/privacy-policy.html">cookies, Privacy Policy, and Terms</a>.</p>
+        <button class='btn-cookie btn-cookie-accept'>I accept</button>
+        <a class="btn-cookie btn-cookie-more-infor" href="https://www.reeds.com/privacy-policy" target="_blank">
+                Read more</a>
+        <p id="autoHideMsg">10000</p>
+    </div>
+    <style type="text/css">
+        #autoHideMsg {
+            display: none;
+        }
+        #bss-cookie-notice {
+            position: fixed;
+            display: none;
+            right:0;bottom:0;            background-color: #ffffff;
+            z-index: 999;
+            padding: 5px 10px;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            box-shadow: 3px 3px 15px #222222;
+            font-size: 14px;
+            max-width: 40%;
+        }
+        #bss-cookie-notice .cookie-title {
+            color: #032323;
+            margin: 10px 0px;
+        }
+        #bss-cookie-notice .cookie-content {
+            color: #032323;
+        }
+        #bss-cookie-notice .btn-cookie {
+            font-weight: bold;
+            border: none;
+            box-shadow: none;
+        }
+        #bss-cookie-notice .btn-cookie-accept {
+            color: #ffffff;
+            background-color: #0a88cc;
+        }
+        #bss-cookie-notice .btn-cookie-more-infor {
+            background-color: #ffffff;
+        }
+        #bss-cookie-notice .btn-cookie-more-infor {
+            color: #0a88cc;
+        }
+
+        #bss-cookie-notice .btn-cookie:hover {
+            border: none;
+            box-shadow: none;
+            color: #222222;
+            background-color: #ffffff;
+        }
+        #bss-cookie-notice a.btn-cookie-more-infor:hover {
+            color: #222222;
+        }
+        #bss-cookie-notice .btn-cookie a:hover {
+            text-decoration: none;
+        }
+        @media screen and (max-width: 768px) {
+            #bss-cookie-notice {
+                max-width: 100%;
+            }
+        }
+        #bss-cookie-notice a.btn-cookie-more-infor {
+    margin-left: 10px; 
+    font-size: 18px;
+}    </style>
+    <script type="text/x-magento-init">
+    {
+        "*": 
+        {
+            "Bss_CookieNotice/js/cookienotice": {}
+        }
+    }
+    </script>
+    
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_PageBuilder/js/widget-initializer": {
+                "config": {"[data-content-type=\"slider\"][data-appearance=\"default\"]":{"Magento_PageBuilder\/js\/content-type\/slider\/appearance\/default\/widget":false},"[data-content-type=\"map\"]":{"Magento_PageBuilder\/js\/content-type\/map\/appearance\/default\/widget":false},"[data-content-type=\"row\"]":{"Magento_PageBuilder\/js\/content-type\/row\/appearance\/default\/widget":false},"[data-content-type=\"tabs\"]":{"Magento_PageBuilder\/js\/content-type\/tabs\/appearance\/default\/widget":false},"[data-content-type=\"slide\"]":{"Magento_PageBuilder\/js\/widget\/show-on-hover":{"buttonSelector":".pagebuilder-slide-button","showOverlay":"hover","dataRole":"slide"}},"[data-content-type=\"banner\"]":{"Magento_PageBuilder\/js\/widget\/show-on-hover":{"buttonSelector":".pagebuilder-banner-button","showOverlay":"hover","dataRole":"banner"}},"[data-content-type=\"buttons\"]":{"Magento_PageBuilder\/js\/content-type\/buttons\/appearance\/inline\/widget":false},"[data-content-type=\"products\"][data-appearance=\"carousel\"]":{"Magento_PageBuilder\/js\/content-type\/products\/appearance\/carousel\/widget":false},"[data-content-type=\"associate-story\"]":{"Kadro_PageBuilderAssociateStories\/js\/content-type\/associate-story\/appearance\/default\/widget":false},"[data-content-type=\"categories\"][data-appearance=\"carousel\"]":{"Kadro_PageBuilderCategorySlider\/js\/content-type\/categories\/appearance\/carousel\/widget":false},"[data-content-type=\"customer-story-slider\"]":{"Kadro_PageBuilderCustomerStories\/js\/content-type\/customer-story-slider\/appearance\/default\/widget":false},"[data-content-type=\"grid\"]":{"Kadro_PageBuilderGrid\/js\/content-type\/grid\/appearance\/default\/widget":false},"[data-content-type=\"grid-item\"]":{"Kadro_PageBuilderGrid\/js\/content-type\/grid-item\/appearance\/default\/widget":false},"[data-content-type=\"hero-slider\"]":{"Kadro_PageBuilderHeroSlider\/js\/content-type\/hero-slider\/appearance\/default\/widget":false},"[data-content-type=\"split-hero\"]":{"Kadro_PageBuilderSplitHero\/js\/content-type\/split-hero\/appearance\/default\/widget":false},"[data-content-type=\"internal_video\"]":{"Kadro_PageBuilderVideo\/js\/content-type\/internal-video\/appearance\/default\/widget":false}},
+                "breakpoints": {"desktop":{"conditions":{"min-width":"1024px"},"options":{"products":{"default":{"slidesToShow":"5"}},"categories":{"default":{"slidesToShow":"6"}}}},"tablet":{"conditions":{"max-width":"1024px","min-width":"768px"},"options":{"products":{"default":{"slidesToShow":"4"},"continuous":{"slidesToShow":"3"}},"categories":{"default":{"slidesToShow":"4"},"continuous":{"slidesToShow":"3"}}}},"mobile":{"conditions":{"max-width":"600px","min-width":"640px"},"options":{"products":{"default":{"slidesToShow":"3"}},"categories":{"default":{"slidesToShow":"3"}}}},"mobile-small":{"conditions":{"max-width":"640px"},"options":{"products":{"default":{"slidesToShow":"2"},"continuous":{"slidesToShow":"1"}},"categories":{"default":{"slidesToShow":"3"},"continuous":{"slidesToShow":"3"}}}}}            }
+        }
+    }
+</script>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "\u002F",
+                "domain": ".www.reeds.com",
+                "secure": false,
+                "lifetime": "31536000"
+            }
+        }
+    }
+</script>
+    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <span>For the best experience on our site, be sure to turn on Javascript in your browser.</span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+    <script>
+        window.onerror = function(msg, url, line) {
+            var key = "collected_errors";
+            var errors = {};
+            if (sessionStorage.getItem(key)) {
+                errors = JSON.parse(sessionStorage.getItem(key));
+            }
+            if (!(window.location.href in errors)) {
+                errors[window.location.href] = [];
+            }
+            errors[window.location.href].push("error: \'" + msg + "\' " + "file: " + url + " " + "line: " + line);
+            sessionStorage.setItem(key, JSON.stringify(errors));
+        };
+    </script>
+<script>
+    require.config({
+        map: {
+            '*': {
+                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter'
+            }
+        }
+    });
+</script>
+
+<script>
+    window.cookiesConfig = window.cookiesConfig || {};
+    window.cookiesConfig.secure = true;
+</script>
+<script>
+    require.config({
+        paths: {
+            googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3\u0026key\u003D'
+        },
+        config: {
+            'Magento_PageBuilder/js/utils/map': {
+                style: ''
+            },
+            'Magento_PageBuilder/js/content-type/map/preview': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.reeds.com\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+            'Magento_PageBuilder/js/form/element/map': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.reeds.com\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+        }
+    });
+</script>
+
+<script>
+    require.config({
+        shim: {
+            'Magento_PageBuilder/js/utils/map': {
+                deps: ['googleMaps']
+            }
+        }
+    });
+</script>
+    <!-- GOOGLE TAG MANAGER -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3FQFS6"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- END GOOGLE TAG MANAGER -->
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_GoogleTagManager/js/google-tag-manager-cart": {
+                "blockNames": ["category.products.list","product.info.upsell","catalog.product.related","checkout.cart.crosssell","search_result_list"],
+                "cookieAddToCart": "add_to_cart",
+                "cookieRemoveFromCart": "remove_from_cart"
+            }
+        }
+    }
+</script>
+<!-- BEGIN GTAG CART SCRIPT -->
+<!-- END GTAG CART SCRIPT -->
+<div id="associateOrdersContainer" style="display: none;">
+    <div class="message global associateOrdersNotice">
+        <div class="content" id="associateOrdersNoticeData"></div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#associateOrdersContainer": {
+            "employeebanner": {
+                "endpointUrl": "https://www.reeds.com/associateorders/store/get/"
+            }
+        }
+    }
+</script>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "kadroNewRelicSID": {
+                    "cookieName": "NEWRELSID"
+                }
+            }
+        }
+</script>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+				        "designerImages": {
+					        "component": "Kadro_DesignerProducts/js/common/view/images"
+				        }
+			        }
+                },
+                "kadroDesignerCart": {
+                }
+            }
+        }
+    </script>
+<div class="page-wrapper"><header class="page-header"><div class="header content"><div class="header-utility-nav">
+<div class="header-phone-number-container">
+    <a href="tel:+1-844-733-3740" data-mobile="844-733-3740">844-REEDS-40</a>
+</div>
+
+<div class="header-card-popup-container header-store-locator-container" data-popup-card="store-locator" data-popup-card-raw-mobile>
+    <a class="header-card-popup-toggle store-locator-toggle" href="https://www.reeds.com/"></a>
+    <div class="header-card-popup">
+        <a class="header-card-popup-close"></a>
+        <div class="header-card-popup-title">Find a Store</div>
+        <div class="header-card-popup-content">
+            <div class="location-widget"
+    data-mage-init='{
+        "kadro/header/location": {
+            "urlLoadLocation": "https://www.reeds.com/reeds-locations/index/loadlocation/",
+            "defaultRadius": "25",
+            "mediaUrlImage": "",
+            "elementPreviewSelector": ".location-widget-preview",
+            "elementNameSelector": ".location-widget-name",
+            "elementAddressStreetSelector": ".location-widget-address-street",
+            "elementAddressCityStateSelector": ".location-widget-address-city-state",
+            "elementPhoneSelector": ".location-widget-phone"
+        }
+    }'>
+    <div class="location-widget-preview-wrapper">
+        <img class="location-widget-preview">
+    </div>
+    <div class="location-widget-details">
+        <div class="location-widget-name"></div>
+        <div class="location-widget-address">
+            <div class="location-widget-address-street"></div>
+            <div class="location-widget-address-city-state"></div>
+        </div>
+        <div class="location-widget-phone"></div>
+    </div>
+    <div class="location-widget-find-message">Find the REEDS Jewelers Store nearest you.</div>
+</div>
+            <a class="store-locator-find-button" href="https://www.reeds.com/">Find Your Store</a>
+        </div>
+    </div>
+</div>
+
+<div class="header-card-popup-container header-reeds-card-container" data-popup-card="reeds-card">
+    <a class="header-card-popup-toggle reeds-card-toggle" href="https://www.reeds.com/reeds-credit-card/"></a>
+    <div class="header-card-popup">
+        <a class="header-card-popup-close"></a>
+        <div class="header-card-popup-title">My REEDS Card</div>
+        <div class="header-card-popup-content"><div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: auto; background-repeat: no-repeat; background-attachment: scroll;"><div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main"><div class="pagebuilder-column reeds-card-image-container" data-content-type="column" data-appearance="align-top" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; width: 25%; align-self: flex-start;"><figure data-content-type="image" data-appearance="full-width" data-element="main" style="margin: 0px; padding: 0px; border-style: none;"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/reeds_card_small.jpg" alt="" title="" data-element="desktop_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/reeds_card_small.jpg" alt="" title="" data-element="mobile_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"></figure></div><div class="pagebuilder-column reeds-card-innertext" data-content-type="column" data-appearance="align-top" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; width: 75%; align-self: flex-start;"><div class="reeds-card-heading" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 10px; padding: 0px;"><p>Start Earning Rewards Now!</p></div><div class="reeds-card-bodytext" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 24px; padding: 0px;"><p>Earn 3% Back in Rewards+ on purchases made with your REEDS Jewelers Credit Card.*</p></div><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="/reeds-credit-card.html" class="button-tertiary">Learn More</a></div></div></div></div><div class="reeds-card-footing" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll;"><div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="https://www.mysynchrony.com/cmp-index.html?market=jewelry&store=reedsjewelers">Manage Your Card</a>
+<a href="https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=44A545926B51E3BC6EC397493C4698553B7FBC208F5D2660&client=REEDS%20Jewelers">Apply For a REEDS Card</a></div></div></div>
+    </div>
+</div>
+</div><span data-action="toggle-nav" class="action nav-toggle"><span>Toggle Nav</span></span>
+<a
+    class="logo"
+    href="https://www.reeds.com/"
+    title="REEDS&#x20;Jewelers&#x20;logo"
+    aria-label="store logo">
+    <img src="https://www.reeds.com/pub/static/frontend/Kadro/reeds/en_US/images/logo.svg"
+         title="REEDS&#x20;Jewelers&#x20;logo"
+         alt="REEDS&#x20;Jewelers&#x20;logo"
+            width="148"            height="43"    />
+</a>
+<div class="header-customer-nav"><div class="block block-search">
+    <div class="block block-title"><strong>Search</strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form" action="https://www.reeds.com/catalogsearch/result/" method="get">
+            <div class="field search">
+                <label class="label" for="search" data-role="minisearch-label">
+                    <span>Search</span>
+                </label>
+                <div class="control">
+                    <input id="search"
+                           type="text"
+                           name="q"
+                           value=""
+                           placeholder="Search"
+                           class="input-text"
+                           maxlength="128"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-autocomplete="both"
+                           autocomplete="off"
+                           data-rfkid="rfkid_6" />
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <div class="nested">
+    <a class="action advanced" href="https://www.reeds.com/catalogsearch/advanced/" data-action="advanced-search">
+        Advanced Search    </a>
+</div>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit"
+                        title="Search"
+                        class="action search">
+                    <span>Search</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="login">
+    <div id="block-authentication" data-bind="scope:'authentication'" class="header-login-toggle-wrapper">
+        <a href="/customer/account/login">Sign In</a>
+        <button
+            type="button"
+            class="action action-auth-toggle"
+            data-trigger="authentication">
+        </button>
+    </div>
+    <div id="block-authentication" data-bind="scope:'authentication'" class="header-login-modal-wrapper">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <script type="text/x-magento-init">
+          {
+              "#block-authentication": {
+                  "Magento_Ui/js/core/app": {"components":{"authentication":{"config":{"template":"Magento_Customer\/kadro\/authentication"},"sortOrder":"1","component":"Magento_Customer\/js\/kadro\/authentication","displayArea":"authentication","children":{"errors":{"sortOrder":"0","component":"Magento_Checkout\/js\/view\/authentication-messages","displayArea":"messages"}}}}}              }
+          }
+        </script>
+    </div>
+</div>
+
+<div data-block="minicart" class="minicart-wrapper">
+    <a class="action showcart" href="https://www.reeds.com/checkout/cart/"
+       data-bind="scope: 'minicart_content'">
+        <span class="text">My Cart</span>
+        <span class="counter qty empty"
+              data-bind="css: { empty: !!getCartParam('summary_count') == false && !isLoading() }, blockLoader: isLoading">
+            <!-- ko if: getCartParam('summary_count') -->
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <!-- /ko -->
+            <!-- ko ifnot: getCartParam('summary_count') -->
+            <span class="counter-number">0</span>
+            <!-- /ko -->
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+            </span>
+        </span>
+    </a>
+            <div class="block block-minicart"
+             data-role="dropdownDialog"
+             data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=minicart]",
+                "triggerTarget":".showcart",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+            <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            </div>
+                    </div>
+        <script>
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.reeds.com\/checkout\/cart\/","checkoutUrl":"https:\/\/www.reeds.com\/checkout\/","updateItemQtyUrl":"https:\/\/www.reeds.com\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.reeds.com\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.reeds.com\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","asLowAsActiveMiniCart":false,"apr":"0.10","months":"12","logo":null,"script":"https:\/\/cdn1.affirm.com\/js\/v2\/affirm.js","public_api_key":"APB2Q9XJTV10D566","min_order_total":"0.01","max_order_total":"100000","currency_rate":null,"display_cart_subtotal_incl_tax":0,"display_cart_subtotal_excl_tax":1,"element_id":"als_mcc","promo_id":"","color_id":"","customerLoginUrl":"https:\/\/www.reeds.com\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cucmVlZHMuY29tL3JlZmxla3Rpb24tdGVtcGxhdGUuaHRtbA%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.reeds.com\/captcha\/refresh\/","isRequired":false,"timestamp":1597042640}}};
+    </script>
+    <script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":0,"display_cart_subtotal_excl_tax":1,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals","children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}}}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"uiComponent","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"shipping.container":{"children":{"shipping":{"children":{"shipping.totals":{"component":"BlueAcorn_HeaderFooter\/js\/view\/minicart\/shipping\/totals","config":{"template":"BlueAcorn_HeaderFooter\/minicart\/shipping\/totals"}}},"component":"uiComponent","config":{"template":"BlueAcorn_HeaderFooter\/minicart\/shipping"}}},"component":"uiComponent","config":{"displayArea":"shippingContainer"}},"grandTotal.container":{"children":{"grandTotal":{"children":{"grandTotal.totals":{"component":"BlueAcorn_HeaderFooter\/js\/view\/minicart\/grandTotal\/totals","config":{"template":"BlueAcorn_HeaderFooter\/minicart\/grandTotal\/totals"}}},"component":"uiComponent","config":{"template":"BlueAcorn_HeaderFooter\/minicart\/grandTotal"}}},"component":"uiComponent","config":{"displayArea":"grandTotalContainer"}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"},"children":{"affirm_minicard":{"component":"Astound_Affirm\/js\/view\/minicart","config":{"template":"Astound_Affirm\/minicart\/info"}}}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Magento_Checkout\/js\/view\/minicart"}},"types":[]}        },
+        "*": {
+            "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fwww.reeds.com\u002Fpub\u002Fstatic\u002Ffrontend\u002FKadro\u002Freeds\u002Fen_US\u002Fimages\u002Floader\u002D1.gif"
+        }
+    }
+    </script>
+</div>
+
+
+</div><ul class="compare wrapper"><li class="item link compare" data-bind="scope: 'compareProducts'" data-role="compare-products-link">
+    <a class="action compare no-display" title="Compare&#x20;Products"
+       data-bind="attr: {'href': compareProducts().listUrl}, css: {'no-display': !compareProducts().count}"
+    >
+        Compare Products        <span class="counter qty" data-bind="text: compareProducts().countCaption"></span>
+    </a>
+</li>
+<script type="text/x-magento-init">
+{"[data-role=compare-products-link]": {"Magento_Ui/js/core/app": {"components":{"compareProducts":{"component":"Magento_Catalog\/js\/view\/compare-products"}}}}}
+</script>
+</ul>
+<script type="text/x-magento-init">
+    {
+        ".page-wrapper": {
+            "Magento_Theme/js/header-popups": {}
+        }
+    }
+</script>
+</div></header>    <div class="sections nav-sections">
+                <div class="section-items nav-sections-items"
+             data-mage-init='{"tabs":{"openedState":"active"}}'>
+                                            <div class="section-item-content nav-sections-item-content"
+                     id="store.menu"
+                     data-role="content">
+                        <nav class="navigation" role="navigation">
+        <ul data-mage-init='{"kadro-menu":{
+                                "toggle":".nav-toggle",
+                                "mediaBreakpoint": "768px",
+                                "expandBehavior": true,
+                                "showImagesMobile": true,
+                                "showCmsBlockMobile": true,
+                                "openDelay": 250
+                                }
+                            }'>
+            <li class="level0 slide-title">Shop</li><li data-level="level0" class="level0 mega-middle-section-2over1 level-top parent "><div class="slide-title"><span>Engagement & Wedding</span></div><a href="/bridal.html" class="level-top mega-middle-section-2over1"><span>Engagement & Wedding</span></a><div class="level0 kadro-submenu cols-5"><div class="slide-title">Engagement & Wedding</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-5"><div class="col"><li data-level="level1" class="level1  parent "><div class="slide-title"><span>Engagement & Wedding</span></div><a class="header" href="/bridal.html"/><span>Engagement & Wedding</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Engagement & Wedding</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/jewelry/new-arrivals.html?ringtype=Wedding+Bands&ringtype=Engagement&rfk=1"/><span>New Arrivals</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/engagement-rings.html?rfk=1"/><span>Engagement Rings</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/wedding-bands.html?rfk=1"/><span>Wedding Bands</span></a></li><li data-level="level2" class="level2   "><a class="product" href="/design-your-ring-plurcr21.html"/><span>Design Your Custom Ring</span></a></li><li data-level="level2" class="level2   "><a class="cmsPage" href="/bridal-education.html"/><span>Bridal Education</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1  parent "><div class="slide-title"><span>Engagement</span></div><a class="header" href="/bridal/engagement-rings.html?rfk=1"/><span>Engagement</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Engagement</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-engagement-style/halo-engagement-rings.html?rfk=1"/><span>Halo</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-engagement-style/solitaire-engagement-rings.html?rfk=1"/><span>Solitaire</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-engagement-style/vintage-inspired-engagement-rings.html?rfk=1"/><span>Vintage-Inspired</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-engagement-style/three-stone-engagement-rings.html?rfk=1"/><span>Three-Stone</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/bridal-sets.html?rfk=1"/><span>Bridal Sets</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-bridal-material/diamond-bridal.html?rfk=1"/><span>Diamond</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-bridal-material/lab-grown-diamond-bridal.html?rfk=1"/><span>Lab-Grown Diamond</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-bridal-material/gemstone-bridal.html?rfk=1"/><span>Gemstone</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1  parent "><div class="slide-title"><span>Wedding</span></div><a class="header" href="/bridal/wedding-bands.html?rfk=1"/><span>Wedding</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Wedding</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/bridal/ladies-wedding-rings.html?rfk=1"/><span>Women's Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/mens-wedding-rings.html?rfk=1"/><span>Men's Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/shop-by-bridal-material/diamond-wedding-bands.html?rfk=1"/><span>Diamond Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/anniversary-rings.html?rfk=1"/><span>Anniversary Rings</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/reeds-priority-wedding-bands/all-priority-wedding-bands.html?rfk=1"/><span>REEDS Priority Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/wedding-day-jewelry.html?rfk=1"/><span>Wedding Day Jewelry</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/something-blue.html?rfk=1"/><span>Something Blue</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Brands</span></div><a class="header" ><span>Brands</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Brands</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/artcarved-bands.html?rfk=1"/><span>ArtCarved Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/benchmark-bands.html?rfk=1"/><span>Benchmark Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/ellaura/all-ellaura.html?rfk=1"/><span>Ellaura Bridal</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/enchanted-disney-bridal.html?rfk=1"/><span>Enchanted Disney Bridal</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/forevermark-bridal-rings.html?rfk=1"/><span>Forevermark Bridal</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/gabriel-and-co/gabriel-and-co-bridal.html?rfk=1"/><span>Gabriel & Co</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/hearts-arrows.html?rfk=1"/><span>Hearts & Arrows</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/kleinfeld-fine-jewelry/all-kleinfeld-fine-jewelry.html?rfk=1"/><span>Kleinfeld Fine Jewelry</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/lashbrook-bands.html?rfk=1"/><span>Lashbrook Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/reeds-econic-diamond/all-reeds-econic-diamond.html?rfk=1"/><span>REEDS ECONIC Diamond</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/reeds-priority-wedding-bands/all-priority-wedding-bands.html?rfk=1"/><span>REEDS Priority Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/reeds-signature-diamond/all-reeds-signature.html?rfk=1"/><span>REEDS Signature</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/triton-bands.html?rfk=1"/><span>TRITON Bands</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/designers/hallmark-bridal.html?rfk=1"/><span>True by Hallmark Bridal</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span></span></div><a class="text" ><span></span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title"></div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Build Your Dream Ring" href="/design-your-ring-plurcr21.html"/><img src="https://www.reeds.com/pub/media/Configurator-EngWedd-MM.jpg"alt="Design Your Ring"/><span class="megamenu-image-hover"><span>Design an engagement ring as unique and special as your beloved with our bridal configurator, a tool that gives you control of every little detail adorning your perfect piece.</span></span></a></li><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Bridal Concierge" href="/diamond-concierge.html"/><img src="https://www.reeds.com/pub/media/Concierge-EngWedd-MM.jpg"alt="Bridal Concierge"/><span class="megamenu-image-hover"><span>Need help creating or finding the ideal ring for your bride-to-be? Our Bridal Concierge is here to guide you to and help you design the ring you've imagined.</span></span></a></li></ul></div></li></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-4over1 level-top parent "><div class="slide-title"><span>Jewelry</span></div><a href="/jewelry.html" class="level-top mega-middle-section-4over1"><span>Jewelry</span></a><div class="level0 kadro-submenu cols-7"><div class="slide-title">Jewelry</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-7"><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Jewelry</span></div><a class="header" href="/jewelry.html"/><span>Jewelry</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Jewelry</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/jewelry/new-arrivals.html?rfk=1"/><span>New Arrivals</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Bracelets&producttype=Earrings&producttype=Necklaces&producttype=Rings&rfk=1"/><span>Sale</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/diamond-jewelry.html?rfk=1"/><span>Diamond</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/lab-grown-diamonds.html?rfk=1"/><span>Lab Grown Diamond</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/gemstone-jewelry.html?rfk=1"/><span>Gemstone </span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/personalized.html?rfk=1"/><span>Personalized</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Rings</span></div><a class="header" href="/jewelry/rings/shop-all-rings.html?rfk=1"/><span>Rings</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Rings</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/bridal/engagement-rings.html?rfk=1"/><span>Engagement</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/bridal/wedding-bands.html?rfk=1"/><span>Wedding</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/rings/fashion-rings/all-fashion-rings.html?rfk=1"/><span>Fashion</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/rings/fashion-rings/promise-rings.html?rfk=1"/><span>Promise</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/rings/fashion-rings/stackable-rings.html?rfk=1"/><span>Stackable</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/rings/fashion-rings/personalized-rings.html?rfk=1"/><span>Personalized</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/rings/shop-all-rings.html?rfk=1"/><span>All Rings</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Earrings</span></div><a class="header" href="/jewelry/earrings/all-earrings.html?rfk=1"/><span>Earrings</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Earrings</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/jewelry/earrings/shop-by-earring-style/diamond-solitaire-earrings.html?rfk=1"/><span>Diamond Solitaires</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/earrings/shop-by-earring-style/hoop-earrings.html?rfk=1"/><span>Hoops</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/earrings/shop-by-earring-style/stud-earrings.html?rfk=1"/><span>Studs</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/earrings/shop-by-earring-style/drop-earrings.html?rfk=1"/><span>Drops</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/earrings/all-earrings.html?rfk=1"/><span>All Earrings</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Necklaces</span></div><a class="header" href="/jewelry/necklaces/all-necklaces.html?rfk=1"/><span>Necklaces</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Necklaces</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/jewelry/necklaces/shop-by-necklace-style/chain-necklaces.html?rfk=1"/><span>Chain</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/necklaces/shop-by-necklace-style/pendant-necklaces.html?rfk=1"/><span>Pendant</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/necklaces/shop-by-necklace-style/religious-necklaces.html?rfk=1"/><span>Religious</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/necklaces/shop-by-necklace-style/heart-necklaces.html?rfk=1"/><span>Heart</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/necklaces/shop-by-necklace-style/bar-necklaces.html?rfk=1"/><span>Bar</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/necklaces/shop-by-necklace-style/personalized-necklaces.html?rfk=1"/><span>Personalized</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/necklaces/all-necklaces.html?rfk=1"/><span>All Necklaces</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Bracelets</span></div><a class="header" href="/jewelry/bracelets/all-bracelets.html?rfk=1"/><span>Bracelets</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Bracelets</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/jewelry/bracelets/shop-by-bracelet-style/charm-bracelets.html?rfk=1"/><span>Charm</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/bracelets/shop-by-bracelet-style/bangle-and-cuff-bracelets.html?rfk=1"/><span>Bangle & Cuff</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/bracelets/shop-by-bracelet-style/tennis-bracelets.html?rfk=1"/><span>Tennis</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/bracelets/shop-by-bracelet-style/chain-bracelets.html?rfk=1"/><span>Chain </span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/bracelets/shop-by-bracelet-style/bolo-bracelets.html?rfk=1"/><span>Bolo</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/bracelets/all-bracelets.html?rfk=1"/><span>All Bracelets</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Collections</span></div><a class="header" ><span>Collections</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Collections</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/jewelry/religious-jewelry.html?rfk=1"/><span>Religious</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/birthstone-jewelry.html?rfk=1"/><span>Birthstone</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/pearl-jewelry.html?rfk=1"/><span>Pearl</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/sports-collegiate.html?rfk=1"/><span>Sports </span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/rembrandt-charms.html?rfk=1"/><span>Rembrandt Charms</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/rainbow-collection.html?rfk=1"/><span>Rainbow</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/stop-jewelry-collection/all-stop-jewelry.html?rfk=1"/><span>Stop Jewelry Collection</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span></span></div><a class="text" ><span></span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title"></div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Personalize Your Piece" href="/jewelry/collections/personalized.html?rfk=1"/><img src="https://www.reeds.com/pub/media/Personalized-Jewelry-MM.jpg"alt="Design Your Ring"/><span class="megamenu-image-hover"><span>Give gifts and jewelry even more meaning with personalized details: selecting favorite gems and birthstones, engravings and more.</span></span></a></li><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Stunning Diamond Jewelry" href="/jewelry/collections/diamond-jewelry.html?rfk=1"/><img src="https://www.reeds.com/pub/media/Diamond-Jewelry-MM.jpg"alt="Bridal Concierge"/><span class="megamenu-image-hover"><span>From earrings to engagement rings, our diamond jewelry collection features a diverse selection of shimmering designs that match any aesthetic.</span></span></a></li></ul></div></li></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-3col-no-headers level-top parent "><div class="slide-title"><span>Watches</span></div><a href="/watches.html" class="level-top mega-middle-section-3col-no-headers"><span>Watches</span></a><div class="level0 kadro-submenu cols-5"><div class="slide-title">Watches</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-5"><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Watches</span></div><a class="header" href="/watches.html"/><span>Watches</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Watches</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/watches/new-arrivals.html?rfk=1"/><span>New Arrivals </span></a></li><li data-level="level2" class="level2   "><a class="category" href="/watches/men.html?rfk=1"/><span>Men's </span></a></li><li data-level="level2" class="level2   "><a class="category" href="/watches/ladies.html?rfk=1"/><span>Ladies'</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/watch-education.html"/><span>Watch Education</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/customer-watch-service-center.html"/><span>Watch Service Center</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/watches/limited-edition.html?rfk=1"/><span>Limited Edition</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/watches/watch-accessories.html?rfk=1"/><span>Watch Accessories</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/watches/all.html?rfk=1"/><span>All Watches</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/baby-g.html?rfk=1"/><span>Baby G</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/breitling-watches.html?rfk=1"/><span>Breitling</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/bulova/bulova-jewelry-and-watch-collection.html?rfk=1"/><span>Bulova</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/cartier-watches.html"/><span>Cartier</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/citizen-eco-drive-watches/citizen-eco-drive.html?rfk=1"/><span>Citizen</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/coach.html?rfk=1"/><span>COACH</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/edifice.html?rfk=1"/><span>Edifice</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/fossil.html?rfk=1"/><span>Fossil</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/frederique-constant.html?rfk=1"/><span>Frederique Constant</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/g-shock/all-g-shock.html?rfk=1"/><span>G-Shock</span></a></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/gucci/all-gucci.html?rfk=1"/><span>Gucci</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/hamilton.html?rfk=1"/><span>Hamilton</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/michael-kors.html?rfk=1"/><span>Michael Kors</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/michele.html?rfk=1"/><span>Michele</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/montblanc.html?rfk=1"/><span>Montblanc</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/movado-watches/movado.html?rfk=1"/><span>Movado</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/nixon-watches.html?rfk=1"/><span>Nixon</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/olivia-burton.html?rfk=1"/><span>Olivia Burton</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/omega/all-omega.html?rfk=1"/><span>OMEGA</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/rado.html?rfk=1"/><span>Rado</span></a></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/raymond-weil.html?rfk=1"/><span>Raymond Weil</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/rebecca-minkoff.html?rfk=1"/><span>Rebecca Minkoff</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/shinola.html?rfk=1"/><span>Shinola</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/swarovski/swarovski-watches.html?rfk=1"/><span>Swarovski</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/tag-heuer/all-tag-heuer.html?rfk=1"/><span>TAG Heuer</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/tissot.html?rfk=1"/><span>Tissot</span></a></li><li data-level="level1" class="level1   "><a class="text" href="/watches/brands/tudor.html?rfk=1"/><span>TUDOR</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/versace-watches.html?rfk=1"/><span>Versace</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/watches/brands/victorinox-swiss-army.html?rfk=1"/><span>Victorinox Swiss Army </span></a></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span></span></div><a class="text" ><span></span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title"></div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Durable And Stylish  G-Shock" href="/watches/brands/g-shock/all-g-shock.html"/><img src="https://www.reeds.com/pub/media/G-Shock-Watches-MM.jpg"alt="Design Your Ring"/><span class="megamenu-image-hover"><span>Shock and water-resistant wristwatches for an active lifestyle.</span></span></a></li><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Learn the Basics" href="/watch-basics.html"/><img src="https://www.reeds.com/pub/media/Watch-Basics-MM.jpg"alt="Bridal Concierge"/><span class="megamenu-image-hover"><span>Need some help with unfamiliar watch terms you've seen while shopping? We've got you covered.</span></span></a></li></ul></div></li></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-4col-no-headers level-top parent "><div class="slide-title"><span>Brands</span></div><a href="/jewelry-brands.html" class="level-top mega-middle-section-4col-no-headers"><span>Brands</span></a><div class="level0 kadro-submenu cols-6"><div class="slide-title">Brands</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-6"><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Brands</span></div><a class="header" href="/jewelry-brands.html"/><span>Brands</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Brands</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/jewelry-brands/new-arrivals.html?rfk=1"/><span>New Arrivals</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/sale/designer-clearance.html?rfk=1"/><span>Sale</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry-brands.html"/><span>All Brands</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/alex-and-ani/all.html?rfk=1"/><span>Alex and Ani</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/alison-and-ivy.html?rfk=1"/><span>Alison & Ivy</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/ania-haie.html?rfk=1"/><span>Ania Haie</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/beverly-k.html?rfk=1"/><span>Beverly K</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/bulova.html?rfk=1"/><span>Bulova Jewelry</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/david-yurman.html"/><span>David Yurman</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/effy.html?rfk=1"/><span>Effy</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/enchanted-disney.html?rfk=1"/><span>Enchanted Disney</span></a></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/enchanted-disney-vault.html?rfk=1"/><span>Enchanted Disney Vault</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/forevermark/all-forevermark.html?rfk=1"/><span>Forevermark</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/gucci.html?rfk=1"/><span>Gucci</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/ippolita.html?rfk=1"/><span>IPPOLITA</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/john-hardy.html?rfk=1"/><span>JOHN HARDY</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/kallati.html?rfk=1"/><span>Kallati</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/kendra-scott.html?rfk=1"/><span>Kendra Scott</span></a></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/lightbox-jewelry/all-lightbox-jewelry.html?rfk=1"/><span>Lightbox</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/marco-bicego.html?rfk=1"/><span>Marco Bicego</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/memoire.html?rfk=1"/><span>Mémoire</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/mikimoto/all-mikimoto.html?rfk=1"/><span>MIKIMOTO</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/montblanc.html?rfk=1"/><span>Montblanc</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/olivia-burton.html?rfk=1"/><span>Olivia Burton</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/pandora/all.html?rfk=1"/><span>Pandora</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/roberto-coin.html?rfk=1"/><span>Roberto Coin</span></a></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/shy-creation.html?rfk=1"/><span>Shy Creation</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/sirena.html?rfk=1"/><span>Sirena</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry/collections/stop-jewelry-collection/all-stop-jewelry.html?rfk=1"/><span>Stop Jewelry</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/swarovski/all-swarovski.html?rfk=1"/><span>Swarovski</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/tous.html?rfk=1"/><span>TOUS</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/william-henry.html?rfk=1"/><span>William Henry</span></a></li><li data-level="level1" class="level1   "><a class="category" href="/jewelry-brands/with-you-lockets.html?rfk=1"/><span>With You Lockets</span></a></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span></span></div><a class="text" ><span></span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title"></div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Charm With Pandora" href="/jewelry-brands/pandora/all.html?rfk=1"/><img src="https://www.reeds.com/pub/media/Pandora-Brands-MM.jpg"alt="Design Your Ring"/><span class="megamenu-image-hover"><span>Meaningful, stylish accessories and charm bracelets from Pandora.</span></span></a></li><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Lightbox Lab-Grown Diamonds" href="/jewelry-brands/lightbox-jewelry/all-lightbox-jewelry.html?rfk=1"/><img src="https://www.reeds.com/pub/media/Lightbox-Brands-MM.jpg"alt="Bridal Concierge"/><span class="megamenu-image-hover"><span>Explore bright blue, romantic pink, and luminous white lab-grown diamonds, created to be a shimmering and sustainable piece.</span></span></a></li></ul></div></li></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-3col-no-headers level-top parent "><div class="slide-title"><span>David Yurman</span></div><a href="/jewelry-brands/david-yurman.html" class="level-top mega-middle-section-3col-no-headers"><span>David Yurman</span></a><div class="level0 kadro-submenu cols-5"><div class="slide-title">David Yurman</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-5"><div class="col"><li data-level="level1" class="level1 mega-shaded-1col parent "><div class="slide-title"><span>David Yurman</span></div><a class="header" href="/jewelry-brands/david-yurman.html"/><span>David Yurman</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">David Yurman</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/jewelry-brands/david-yurman.html#!/womens"/><span>Women's</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/jewelry-brands/david-yurman.html#!/mens"/><span>Men's</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/reeds-locations-david-yurman.html"/><span>Store Locations</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/contacting-reeds-jewelers.html"/><span>Contact Us</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1 mega-image image-center-text "><a class="image" data-imagetext="" href="/jewelry-brands/david-yurman.html#!/womens"/><img src="https://www.reeds.com/pub/media/David-Yurman-Women-3.jpg"alt="David Yurman Women's"/><span class="megamenu-image-hover"><span>Explore select styles from David Yurman’s signature collections.</span></span></a></li></div><div class="col"><li data-level="level1" class="level1 mega-image image-center-text "><a class="image" data-imagetext="" href="/jewelry-brands/david-yurman.html#!/mens"/><img src="https://www.reeds.com/pub/media/David-Yurman-Men_1.jpg"alt="David Yurman Men's"/><span class="megamenu-image-hover"><span>Discover our curated selection of jewelry for him.</span></span></a></li></div><div class="col"><li data-level="level1" class="level1 mega-image image-center-text "><a class="image" data-imagetext="" href="/jewelry-brands/david-yurman.html#!/mens/bands"/><img src="https://www.reeds.com/pub/media/David-Yurman-Mens-Bands_1.jpg"alt="David Yurman Men's Bands"/><span class="megamenu-image-hover"><span>Introducing new designs for him.</span></span></a></li></div><div class="col"></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-1-short level-top parent "><div class="slide-title"><span>Rolex</span></div><a href="/rolex-watches.html" class="level-top mega-middle-section-1-short"><span>Rolex</span></a><div class="level0 kadro-submenu cols-3"><div class="slide-title">Rolex</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-3"><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Rolex</span></div><a class="header" href="/rolex-watches.html"/><span>Rolex</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Rolex</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/rolex-watches/collections.html"/><span>Rolex Collections</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/rolex-watches/rolex-festive-collection.html"/><span>Festive Collections</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/rolex-watches-reeds-stores.html"/><span>Our Stores</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/rolex-watches-contact-us.html"/><span>Contact Us</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Collections</span></div><a class="header" ><span>Collections</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Collections</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=day-date"/><span>DAY-DATE</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=sky-dweller"/><span>SKY-DWELLER</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=datejust"/><span>DATEJUST</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=pearlmaster"/><span>PEARLMASTER</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=oyster-perpetual"/><span>OYSTER PERPETUAL</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=air-king"/><span>AIR-KING</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=cosmograph-daytona"/><span>COSMOGRAPH DAYTONA</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=submariner"/><span>SUBMARINER</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=sea-dweller"/><span>SEA-DWELLER</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=gmt-master-ii"/><span>GMT-MASTER II</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=yacht-master"/><span>YACHT-MASTER</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=explorer"/><span>EXPLORER</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=milgauss"/><span>MILGAUSS</span></a></li><li data-level="level2" class="level2   "><a class="text" href="https://www.rolex.com/corners/rolex-watches/32171180ee332145d62847156cfdaf21.html#family=cellini"/><span>CELLINI</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   "><a class="category" ><span></span></a></li><li data-level="level1" class="level1 mega-image image-center-text "><a class="image" data-imagetext="Contact Us" href="/rolex-watches-contact-us.html"/><img src="https://www.reeds.com/pub/media/Rolex-ContactUs2.jpg"alt="Rolex Contact Us"/><span class="megamenu-image-hover"><span>Contact us to answer any inquiry or to book an appointment with our dedicated staff.</span></span></a></li><li data-level="level1" class="level1 mega-image image-center-text "><a class="image" data-imagetext="Rolex Showrooms" href="/rolex-watches-reeds-stores.html"/><img src="https://www.reeds.com/pub/media/Rolex-Showrooms_1.jpg"alt="Rolex Showrooms"/><span class="megamenu-image-hover"><span>Visit one of our Rolex Showrooms and our expert staff will help you find the perfect timepiece.</span></span></a></li></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-2col level-top parent "><div class="slide-title"><span>Discover</span></div><a class="level-top mega-middle-section-2col"><span>Discover</span></a><div class="level0 kadro-submenu cols-4"><div class="slide-title">Discover</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-4"><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Discover</span></div><a class="header" ><span>Discover</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Discover</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/about-reeds-jewelers.html"/><span>About Us</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/customer-care-plans.html"/><span>Care Plans</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/reeds-credit-card.html"/><span>REEDS Credit Card</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/tips-trends.html"/><span>Tips & Trends</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Jewelry Education</span></div><a class="header" href="/jewelry-education.html"/><span>Jewelry Education</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Jewelry Education</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/4-c-diamond-buying.html"/><span>The 4 C's</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/engagement-ring-guide.html"/><span>Engagement Ring Guide</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/glossary.html"/><span>Jewelry Glossary</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sizing-guides.html"/><span>Sizing Guides</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/lab-grown-diamonds.html"/><span>Lab Grown Diamond Guide</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Watch Education</span></div><a class="header" href="/watch-education.html"/><span>Watch Education</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Watch Education</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/watch-basics.html"/><span>Watch Basics</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/watch-glossary.html"/><span>Watch Glossary</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/warranties.html"/><span>Watch Warranties</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/customer-watch-service-center.html"/><span>Watch Service Center</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span></span></div><a class="text" ><span></span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title"></div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="The REEDS Story" href="/reeds-jewelers-since-1946.html"/><img src="https://www.reeds.com/pub/media/Since1946-MM.jpg"alt="Design Your Ring"/><span class="megamenu-image-hover"><span>From the opening one hometown store in Wilmington, NC 74 years ago, we became a trusted jeweler for generations of families in the Southeast and beyond.</span></span></a></li><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Meet Our Family" href="/about-reeds-jewelers.html#our_people"/><img src="https://www.reeds.com/pub/media/Associate-Stories-MM.jpg"alt="Bridal Concierge"/><span class="megamenu-image-hover"><span>REEDS in-store associates share their stories and experiences being a part of their clients' precious life moments.</span></span></a></li></ul></div></li></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-2col level-top parent "><div class="slide-title"><span>Gifts</span></div><a href="/gifts.html" class="level-top mega-middle-section-2col"><span>Gifts</span></a><div class="level0 kadro-submenu cols-4"><div class="slide-title">Gifts</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-4"><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Gifts</span></div><a class="header" href="/gifts.html"/><span>Gifts</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Gifts</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/gifts/ladies.html?rfk=1"/><span>Gifts For Her</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/men.html?rfk=1"/><span>Gifts For Him</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/children.html?rfk=1"/><span>Gifts For Children</span></a></li><li data-level="level2" class="level2   "><a class="product" href="/reeds-gift-card.html"/><span>REEDS Gift Card</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Occasion</span></div><a class="header" ><span>Occasion</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Occasion</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/gifts/shop-by-occasion/anniversary.html?rfk=1"/><span>Anniversary</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/wedding-gifts/wedding.html?rfk=1"/><span>Wedding </span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/shop-by-occasion/graduation-gift-ideas.html?rfk=1"/><span>Graduation</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/shop-by-occasion/birthday-gifts.html?rfk=1"/><span>Birthday Gifts</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/shop-by-occasion/gifts-just-because.html?rfk=1"/><span>Gifts Just Because</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Gift Ideas</span></div><a class="header" ><span>Gift Ideas</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Gift Ideas</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/gifts/gift-ideas/gift-sets.html?rfk=1"/><span>Gift Sets</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/gift-ideas/all-accessories.html?rfk=1"/><span>Accessories</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/collections/birthstone-jewelry.html?rfk=1"/><span>Birthstone Jewelry</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry/religious-jewelry.html?rfk=1"/><span>Religious Jewelry</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/gift-ideas/gifts-under-150.html?rfk=1"/><span>Gifts Under $150</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/gifts/gift-ideas/gifts-under-250.html?rfk=1"/><span>Gifts Under $250</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span></span></div><a class="text" ><span></span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title"></div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Pieces She'll Love" href="/gifts/ladies.html?rfk=1"/><img src="https://www.reeds.com/pub/media/Gifts-For_Her-MM.jpg"alt="Design Your Ring"/><span class="megamenu-image-hover"><span>Find a gift for any special occasion--big or small--that's sure to take her breath away.</span></span></a></li><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Pieces He'll Love" href="/gifts/men.html?rfk=1"/><img src="https://www.reeds.com/pub/media/Gifts-For_Him-MM.jpg"alt="Bridal Concierge"/><span class="megamenu-image-hover"><span>From watches to chains--and everything in between--find the perfect gift for him in our collection.</span></span></a></li></ul></div></li></div></ul></div></li><li data-level="level0" class="level0 mega-middle-section-2col level-top parent "><div class="slide-title"><span>Sale</span></div><a href="/sale.html" class="level-top mega-middle-section-2col"><span>Sale</span></a><div class="level0 kadro-submenu cols-4"><div class="slide-title">Sale</div><a class="return-trigger">Return</a><ul class="level0 submenu cols-4"><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Sale</span></div><a class="header" href="/sale.html"/><span>Sale</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Sale</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="category" href="/sale/new-to-clearance.html?rfk=1"/><span>New to Clearance</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/promotions.html"/><span>Limited Time Promotions</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/sale/clearance-sale.html?rfk=1"/><span>All Clearance</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Category</span></div><a class="header" ><span>Category</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Category</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Rings&rfk=1"/><span>Rings</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Earrings&rfk=1"/><span>Earrings</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Necklaces&rfk=1"/><span>Necklaces</span></a></li><li data-level="level2" class="level2  "><a class="text" href="/sale/clearance-sale.html?producttype=Bracelets&rfk=1"/><span>Bracelets</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Charms&rfk=1"/><span>Charms</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Watches&rfk=1"/><span>Watches</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Crystal&rfk=1"/><span>Crystal</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?producttype=Accessories&rfk=1"/><span>Accessories</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span>Featured Designers</span></div><a class="header" ><span>Featured Designers</span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title">Featured Designers</div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?brands=Alex+and+Ani&rfk=1"/><span>Alex and Ani</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?brands=Enchanted+Disney&rfk=1"/><span>Enchanted Disney</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?brands=John+Hardy&rfk=1"/><span>John Hardy</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?brands=Kendra+Scott&rfk=1"/><span>Kendra Scott</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/jewelry-brands/pandora/pandora-sale.html?rfk=1"/><span>Pandora</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?brands=Swarovski+Jewelry&rfk=1"/><span>Swarovski Jewelry</span></a></li><li data-level="level2" class="level2   "><a class="text" href="/sale/clearance-sale.html?brands=TOUS&rfk=1"/><span>TOUS</span></a></li><li data-level="level2" class="level2   "><a class="category" href="/sale/designer-clearance.html?rfk=1"/><span>All Designer Clearance</span></a></li></ul></div></li></div><div class="col"><li data-level="level1" class="level1   parent "><div class="slide-title"><span></span></div><a class="text" ><span></span></a><div class="level1 kadro-submenu cols-0"><div class="slide-title"></div><a class="return-trigger">Return</a><ul class="level1 submenu cols-0"><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Deals For A Limited Time" href="/promotions.html"/><img src="https://www.reeds.com/pub/media/Limited-TIme-Deals-MM.jpg"alt="Limited Time Deals"/><span class="megamenu-image-hover"><span>Take a look at our current savings events and shop our limited-time promotional deals. You'll find exceptional savings on your next fine jewelry piece.</span></span></a></li><li data-level="level2" class="level2 mega-image image-center-text "><a class="image" data-imagetext="Luxury For Less" href="/sale/designer-clearance.html?rfk=1"/><img src="https://www.reeds.com/pub/media/Designer-Sales-MM.jpg"alt="Designer Sale"/><span class="megamenu-image-hover"><span>Discover savings on designer collections.</span></span></a></li></ul></div></li></div></ul></div></li>        </ul>
+    </nav>
+<a href="https://www.reeds.com/rolex-watches.html" class="rolex-retailer-clock"></a>
+<script src="https://static.rolex.com/retailers/clock/retailercall.js"></script>
+<script>
+    var rdp = new RolexRetailerClock();
+    var rdpConfig = {
+        dealerAPIKey: '32171180ee332145d62847156cfdaf21',
+        lang: 'en_us',
+        colour: 'gold'
+    }
+    try {
+        rdp.getRetailerClock(rdpConfig);
+    } catch (err) {}
+</script>                </div>
+                                            <div class="section-item-content nav-sections-item-content"
+                     id="store.links"
+                     data-role="content">
+                    <!-- Account links -->                </div>
+                                    </div>
+    </div>
+<div class="breadcrumbs">
+    <ul class="items">
+                    <li class="item home">
+                            <a href="https://www.reeds.com/"
+                   title="Go&#x20;to&#x20;Home&#x20;Page">
+                    Home                </a>
+                        </li>
+                    <li class="item cms_page">
+                            <strong>&nbsp; </strong>
+                        </li>
+            </ul>
+</div>
+<main id="maincontent" class="page-main"><div data-bind="scope: 'messages'">
+    <!-- ko if: cookieMessages && cookieMessages.length > 0 -->
+    <div role="alert" data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: messages().messages && messages().messages.length > 0 -->
+    <div role="alert" data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
+                    }
+                }
+            }
+    }
+</script>
+<a id="contentarea" tabindex="-1"></a>
+<div class="page messages"><div data-placeholder="messages"></div>
+</div><div class="columns"><div class="column main"><script type="text/x-magento-init">
+    {
+      "*": {
+        "zendeskWidget": {
+            "account_key": "4iI5xbxIzCrMyNWgoq58kVl6PPphNNhQ",
+            "default_text": "Welcome to Reeds! How may we assist you today?",
+            "bridal_text": "Our diamond and jewelry consultants are available now!"
+        }
+      }
+    }
+
+</script><!-- --><input name="form_key" type="hidden" value="6BGHqgNyRtGGPwpa" /><div id="authenticationPopup" data-bind="scope:'authenticationPopup'" style="display: none;">
+    <script>
+        window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/www.reeds.com\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/www.reeds.com\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/www.reeds.com\/"};
+    </script>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#authenticationPopup": {
+                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"Magento_Customer\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"},"amazon-button":{"component":"Amazon_Login\/js\/view\/login-button-wrapper","sortOrder":"0","displayArea":"additional-login-form-fields","config":{"tooltip":"Securely login to our website using your existing Amazon details.","componentDisabled":true}}}}}}            },
+            "*": {
+                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fwww.reeds.com\u002Fpub\u002Fstatic\u002Ffrontend\u002FKadro\u002Freeds\u002Fen_US\u002Fimages\u002Floader\u002D1.gif"
+            }
+        }
+    </script>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/section-config": {
+                "sections": {"stores\/store\/switch":"*","stores\/store\/switchrequest":"*","directory\/currency\/switch":"*","*":["messages","connector","redemption","bta","cart-fiddle","browse-fiddle","webform"],"customer\/account\/logout":["recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":"*","customer\/account\/createpost":"*","customer\/account\/editpost":"*","customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data"],"checkout\/cart\/delete":["cart"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items","checkout-fields"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","instant-purchase"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"authorizenet\/directpost_payment\/place":["cart","checkout-data"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"customer_order\/cart\/updatefaileditemoptions":["cart"],"checkout\/cart\/updatefaileditemoptions":["cart"],"customer_order\/cart\/advancedadd":["cart"],"checkout\/cart\/advancedadd":["cart"],"checkout\/cart\/removeallfailed":["cart"],"customer_order\/cart\/addfaileditems":["cart"],"checkout\/cart\/addfaileditems":["cart"],"customer_order\/sku\/uploadfile":["cart"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"wishlist\/index\/copyitem":["wishlist"],"wishlist\/index\/copyitems":["wishlist"],"wishlist\/index\/deletewishlist":["wishlist","multiplewishlist"],"wishlist\/index\/createwishlist":["multiplewishlist"],"wishlist\/index\/moveitem":["wishlist"],"wishlist\/index\/moveitems":["wishlist"],"wishlist\/search\/addtocart":["cart","wishlist"],"multishipping\/checkout\/overviewpost":["cart"],"giftregistry\/index\/cart":["cart"],"giftregistry\/view\/addtocart":["cart"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"amasty_promo\/cart\/add":["cart"]},
+                "clientSideSections": ["checkout-data","cart-data","chatData"],
+                "baseUrls": ["https:\/\/www.reeds.com\/"],
+                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","wishlist","instant-purchase","multiplewishlist","persistent","review","connector","redemption","bta","cart-fiddle","browse-fiddle","webform","chatData","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement","checkout-fields","collection-point-result","pickup-location-result"]            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/customer-data": {
+                "sectionLoadUrl": "https\u003A\u002F\u002Fwww.reeds.com\u002Fcustomer\u002Fsection\u002Fload\u002F",
+                "expirableSectionLifetime": 60,
+                "expirableSectionNames": ["cart","persistent"],
+                "cookieLifeTime": "31536000",
+                "updateSessionUrl": "https\u003A\u002F\u002Fwww.reeds.com\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/invalidation-processor": {
+                "invalidationRules": {
+                    "website-rule": {
+                        "Magento_Customer/js/invalidation-rules/website-rule": {
+                            "scopeConfig": {
+                                "websiteId": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/www.reeds.com\/page_cache\/block\/render\/page_id\/88\/","handles":["default","cms_page_view","cms_page_view_id_reflektion-template.html"],"originalRequest":{"route":"cms","controller":"page","action":"view","uri":"\/reflektion-template.html"},"versionCookieName":"private_content_version"}        }
+    }
+</script>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Banner/js/model/banner":
+            {"sectionLoadUrl":"https:\/\/www.reeds.com\/banner\/ajax\/load\/","cacheTtl":30000}        }
+}
+</script>
+
+<script>
+
+require (['uiRegistry'], function(registry) {
+    registry.set('amazonPayment', {"widgetUrl":"https:\/\/static-na.payments-amazon.com\/OffAmazonPayments\/us\/js\/Widgets.js?nomin","merchantId":"ADQ4U3O5WIEOA","clientId":"amzn1.application-oa2-client.209350a2000c4a00a08d69f66ce6d923","isPwaEnabled":true,"isLwaEnabled":false,"isSandboxEnabled":false,"chargeOnOrder":false,"authorizationMode":"synchronous","displayLanguage":"en-US","buttonTypePwa":"PwA","buttonTypeLwa":"LwA","buttonColor":"LightGray","buttonSize":"small","redirectUrl":"https:\/\/www.reeds.com\/amazon\/login\/guest\/","loginPostUrl":"https:\/\/www.reeds.com\/customer\/account\/loginPost\/","customerLoginPageUrl":"https:\/\/www.reeds.com\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cucmVlZHMuY29tL3JlZmxla3Rpb24tdGVtcGxhdGUuaHRtbA%2C%2C\/","sandboxSimulationOptions":[],"loginScope":"profile payments:widget payments:shipping_address payments:billing_address","allowAmLoginLoading":true,"isEuPaymentRegion":false,"presentmentCurrency":"USD","oAuthHashRedirectUrl":"https:\/\/www.reeds.com\/amazon\/login\/processAuthHash\/","isQuoteDirty":false,"region":"us","useMultiCurrency":false,"scaRegions":["de","uk"]});
+});
+
+</script>
+<div data-rfkid="rfkid_container"></div>
+<div class="kadro-rfk-movable" data-destination=".rfk_facet_container" data-append><div data-content-type="row" data-appearance="contained" data-element="main"><div class="not-your-style-block" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; min-height: 295px; margin: 0px; padding: 0px;"><div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main"><div class="pagebuilder-column pagebuilder-grid-item-wrapper" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; min-height: 295px; width: 100%; margin: 0px; padding: 0px; align-self: stretch;"><div class="pagebuilder-grid-item light-theme-grid-item background-image-5f30efd02cb5d background-image-5f30efd033341" data-content-type="grid-item" data-appearance="default" data-background-images='{\"desktop_image\":\"https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif\",\"mobile_image\":\"https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif\"}' data-element="main"><div class="grid-item-text"><div class="pagebuilder-grid-item-title" data-element="title"> Free 2-Day Shipping on Orders $300+ </div><a class="pagebuilder-grid-item-link" href="/orders-shipping.html#shippingAndDeliveryOptions" target="" data-link-type="default" data-element="link">LEARN MORE</a></div><a class="pagebuilder-grid-item-link-wrapper" href="/orders-shipping.html#shippingAndDeliveryOptions" target="" data-link-type="default" data-element="link"></a><a class="grid-item-text hover-text" href="/orders-shipping.html#shippingAndDeliveryOptions" target="" data-link-type="default" data-element="link"><div class="pagebuilder-grid-item-title" data-element="title"> Free 2-Day Shipping on Orders $300+ </div><span class="pagebuilder-grid-item-link" href="/orders-shipping.html#shippingAndDeliveryOptions" target="" data-link-type="default" data-element="link">LEARN MORE</span></a><a class="pagebuilder-grid-item-link-hover-wrapper" href="/orders-shipping.html#shippingAndDeliveryOptions" target="" data-link-type="default" data-element="link"></a></div><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><style type="text/css">
+.not-your-style-block {
+    max-width: 295px;
+    height: 295px;
+    position: relative;
+    display: block !important;
+    margin: 20 auto !important;
+}
+
+.not-your-style-block .pagebuilder-grid-item {
+    height: 295px;
+}
+
+.not-your-style-block .pagebuilder-grid-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(92, 47, 57, 0) 0%, rgba(92, 47, 57, 1) 100%);
+    opacity: 0.6;
+}
+
+.not-your-style-block .pagebuilder-column-group,
+.not-your-style-block .pagebuilder-grid-item-wrapper {
+    display: block !important;
+}
+
+.not-your-style-block .pagebuilder-grid-item-wrapper .pagebuilder-grid-item .grid-item-text {
+    position: static;
+}
+
+.not-your-style-block .grid-item-text .pagebuilder-grid-item-title {
+    
+position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20px;
+    color: #ffffff !important;
+    font-size: 2.9rem;
+    padding: 0 20px;
+}
+
+.not-your-style-block .grid-item-text .pagebuilder-grid-item-link {
+    position: absolute;
+    bottom: 30px;
+    left: 34px;
+    right: 34px;
+    font-size: 1.4rem;
+}
+</style></div><style type="text/css">.background-image-5f30efd02cb5d {background-image: url(https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif);}@media only screen and (max-width: 600px) and (min-width: 640px) {.background-image-5f30efd02cb5d {background-image: url(https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif);}}@media only screen and (max-width: 640px) {.background-image-5f30efd02cb5d {background-image: url(https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif);}}</style><style type="text/css">.background-image-5f30efd033341 {background-image: url(https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif);}@media only screen and (max-width: 600px) and (min-width: 640px) {.background-image-5f30efd033341 {background-image: url(https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif);}}@media only screen and (max-width: 640px) {.background-image-5f30efd033341 {background-image: url(https://www.reeds.com/pub/media/wysiwyg/Free-Shipping-Left-Nav.gif);}}</style></div></div></div></div></div>
+<div class="reeds-guarantee-block-container"><div data-content-type="row" data-appearance="contained" data-element="main"><div class="bg-color-primary layout-width-xlarge" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin-top: 0px; margin-bottom: 0px; padding-top: 65px; padding-bottom: 40px;"><div class="heading-main heading-accent font-color-white" data-content-type="text" data-appearance="default" data-element="main" style="border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><p style="text-align: center;">REEDS Guarantee</p></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div class="bg-color-primary guarantee-content layout-width-xlarge layout-gutter" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin-top: -25px; margin-bottom: -25px; padding: 0px;"><div class="pagebuilder-column-group" style="display: flex;" data-content-type="column-group" data-grid-size="12" data-element="main"><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; width: 25%; margin-top: 0px; margin-bottom: 0px; padding: 25px 0px; align-self: stretch;"><figure data-content-type="image" data-appearance="full-width" data-element="main" style="text-align: center; margin: 0px 0px 14px; padding: 0px; border-style: none;"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/free-shipping-icon_1_.png" alt="" title="" data-element="desktop_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/free-shipping-icon_1_.png" alt="" title="" data-element="mobile_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"></figure><div class="heading-quaternary font-color-white" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 15px; padding: 0px;"><p style="text-align: center;">Free Shipping</p></div><div class="font-color-white-alt" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><p style="text-align: center;">Free shipping to anywhere in the continental US for orders of $30 or more.</p></div><div data-content-type="html" data-appearance="default" data-element="main" style="text-align: center; border-style: none; border-width: 1px; border-radius: 0px; margin: 60px 0px 0px; padding: 0px;" data-decoded="true"><a href="/kadro/rest/getcmspopup/blockId/promotional_shipping_modal" class="button-secondary-alt ajax-popup" style="padding: 16px 40px;">Learn More</a></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; width: 25%; margin-top: 0px; margin-bottom: 0px; padding: 25px 0px; align-self: stretch;"><figure data-content-type="image" data-appearance="full-width" data-element="main" style="text-align: center; margin: 0px 0px 14px; padding: 0px; border-style: none;"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/free-returns-icon_1_.png" alt="" title="" data-element="desktop_image" style="max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/free-returns-icon_1_.png" alt="" title="" data-element="mobile_image" style="max-width: 100%; height: auto;"></figure><div class="heading-quaternary font-color-white" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 15px; padding: 0px;"><p style="text-align: center;">Free Returns</p></div><div class="font-color-white-alt" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><p style="text-align: center;">Love your REEDS purchase or we&rsquo;ll take it back with risk-free 30 day returns and exchanges.</p></div><div data-content-type="buttons" data-appearance="inline" data-same-width="true" data-element="main" style="text-align: center; border-width: 1px; border-radius: 0px; margin: 60px 0px 0px; padding: 0px;"><div class="guarantee-button button-alt" data-content-type="button-item" data-appearance="default" data-element="main" style="display: inline-block;"><a class="pagebuilder-button-secondary" href="https://www.reeds.com/returns-exchanges.html" target="" data-link-type="page" data-element="link" style="text-align: center; margin: 0px; padding: 16px 40px;"><span data-element="link_text">Our Promise</span></a></div></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; width: 25%; margin-top: 0px; margin-bottom: 0px; padding: 25px 0px; align-self: stretch;"><figure data-content-type="image" data-appearance="full-width" data-element="main" style="text-align: center; margin: 0px 0px 14px; padding: 0px; border-style: none;"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/personal-service-icon_1_.png" alt="" title="" data-element="desktop_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/personal-service-icon_1_.png" alt="" title="" data-element="mobile_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"></figure><div class="heading-quaternary font-color-white" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 15px; padding: 0px;"><p style="text-align: center;">Personal Service</p></div><div class="font-color-white-alt" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><p style="text-align: center;">Let us help you find the perfect piece in person, on the phone, or on live chat.</p></div><div data-content-type="buttons" data-appearance="inline" data-same-width="true" data-element="main" style="text-align: center; border-width: 1px; border-radius: 0px; margin: 60px 0px 0px; padding: 0px;"><div class="guarantee-button button-alt" data-content-type="button-item" data-appearance="default" data-element="main" style="display: inline-block;"><a class="pagebuilder-button-secondary" href="https://www.reeds.com/contacting-reeds-jewelers.html" target="" data-link-type="page" data-element="link" style="text-align: center; margin: 0px; padding: 16px 40px;"><span data-element="link_text">Contact Us</span></a></div></div></div><div class="pagebuilder-column" data-content-type="column" data-appearance="full-height" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; width: 25%; margin-top: 0px; margin-bottom: 0px; padding: 25px 0px; align-self: stretch;"><figure data-content-type="image" data-appearance="full-width" data-element="main" style="text-align: center; margin: 0px 0px 14px; padding: 0px; border-style: none;"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/reeds-card-icon2_1_.png" alt="" title="" data-element="desktop_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/reeds-card-icon2_1_.png" alt="" title="" data-element="mobile_image" style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;"></figure><div class="heading-quaternary font-color-white" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 15px; padding: 0px;"><p style="text-align: center;">REEDS Credit Card</p></div><div class="font-color-white-alt" data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><p style="text-align: center;">Exclusive financing and competitive rates. Apply for your own REEDS Card today.</p></div><div data-content-type="buttons" data-appearance="inline" data-same-width="true" data-element="main" style="text-align: center; border-width: 1px; border-radius: 0px; margin: 60px 0px 0px; padding: 0px;"><div class="guarantee-button button-alt" data-content-type="button-item" data-appearance="default" data-element="main" style="display: inline-block;"><a class="pagebuilder-button-secondary" href="https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=44A545926B51E3BC6EC397493C4698553B7FBC208F5D2660&amp;client=REEDS%20Jewelers" target="_blank" data-link-type="default" data-element="link" style="text-align: center; margin: 0px; padding: 16px 40px;"><span data-element="link_text">Apply Today</span></a></div></div></div></div></div></div><div data-content-type="row" data-appearance="contained" data-element="main"><div class="bg-color-primary layout-width-xlarge" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="inner" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; padding-bottom: 70px;"><div data-content-type="buttons" data-appearance="inline" data-same-width="true" data-element="main" style="text-align: center; border-width: 1px; border-radius: 0px; display: none; margin: 0px; padding: 0px;"><div class="guarantee-button button-alt" data-content-type="button-item" data-appearance="default" data-element="main" style="display: inline-block;"><a class="pagebuilder-button-secondary" href="/kadro/rest/getcmspopup/blockId/promotional_shipping_modal" target="" data-link-type="default" data-element="link" style="text-align: center; margin: 0px 20px 0px 0px; padding: 16px 40px;"><span data-element="link_text">Learn More</span></a></div><div class="guarantee-button button-alt" data-content-type="button-item" data-appearance="default" data-element="main" style="display: inline-block;"><a class="pagebuilder-button-secondary" href="https://www.reeds.com/returns-exchanges.html" target="" data-link-type="page" data-element="link" style="text-align: center; margin: 0px 20px; padding: 16px 40px;"><span data-element="link_text">Our Promise</span></a></div><div class="guarantee-button button-alt" data-content-type="button-item" data-appearance="default" data-element="main" style="display: inline-block;"><a class="pagebuilder-button-secondary" href="https://www.reeds.com/contacting-reeds-jewelers.html" target="" data-link-type="page" data-element="link" style="text-align: center; margin: 0px 20px; padding: 16px 40px;"><span data-element="link_text">Contact Us</span></a></div><div class="guarantee-button button-alt" data-content-type="button-item" data-appearance="default" data-element="main" style="display: inline-block;"><a class="pagebuilder-button-secondary" href="https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=44A545926B51E3BC6EC397493C4698553B7FBC208F5D2660&amp;client=REEDS%20Jewelers" target="_blank" data-link-type="default" data-element="link" style="text-align: center; margin: 0px 0px 0px 20px; padding: 16px 40px;"><span data-element="link_text">Apply Today</span></a></div></div><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;" data-decoded="true"><style>
+.guarantee-content .pagebuilder-column {
+    max-width: 245px;
+    margin: 0 auto;
+}
+
+.guarantee-content .pagebuilder-column figure {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .guarantee-content .pagebuilder-column-group {
+        flex-wrap: wrap;
+    }
+
+    .guarantee-content .pagebuilder-column {
+       margin: auto;
+       flex-basis: 100%;
+    }
+
+    .guarantee-button {
+        display: block;
+    }
+
+    .guarantee-button > div {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .guarantee-button:not(:last-child) > div {
+        margin-bottom: 30px !important;
+    }
+}
+</style></div></div></div></div><div class="concierge-sticky-container" data-mage-init='{"conciergeSticky": {}}'>
+    <a class="concierge-sticky-cta">
+        <div class="concierge-sticky-toggle"></div>
+        <div class="concierge-sticky-title">REEDS Concierge<div class="concierge-sticky-icon"></div></div>
+    </a>
+    <a class="concierge-sticky-option option-schedule" href="/appointment-booker" title="Schedule Appt" ?><span class="concierge-sticky-icon"></span></a>
+        <a class="concierge-sticky-option option-call" href="tel:844-REEDS-40" title="Call" ?><span class="concierge-sticky-icon"></span></a>
+        <a class="concierge-sticky-option option-chat" href="#" data-show-chat="true" title="Chat" ?><span class="concierge-sticky-icon"></span></a>
+</div>
+<div class="seo-cms-content">
+<script type="text/x-magento-init">
+    {
+            ".seo-cms-content" : {
+                "Kadro_SEOBlock/js/seo-cms-truncate": {}
+            }
+    }
+</script>
+</div></div></div></main><div class="page-bottom"><div class="content"><script type="text/javascript" bronto-popup-id="fe96925b-ca5d-4651-a713-0b0057b39bdb" src="https://cdn.bronto.com/popup/delivery.js"></script>
+<script type="text/javascript">
+  if (document.addEventListener) {
+    document.addEventListener('bronto:popup-submitted', function(e) {
+      jQuery.post('https://www.reeds.com/bint/integration/popup/', {
+        emailAddress: e.detail.email
+      });
+    }, false);
+  }
+</script>
+<script type="text/x-magento-init">
+{
+  "*": {
+    "Bronto_Cart/js/capture": {
+      "captureUrl": "https://www.reeds.com/bcart/cart/capture/",
+      "selectors": "input[type=email], .validate-email, #newsletter, #email, #email_address, #email-confirmation, #customer-email, input[id*=popup-subscription-inputs-email], input[name=email], #newsletter-modal-field"
+    }
+  }
+}
+</script>
+<div class="block block-cart-fiddle" data-bind="scope: 'cart-fiddle'" data-role="cart-fiddle" style="display: none;">
+    <div data-bind="cartFiddleBinding: cartFiddle()"></div>
+</div>
+<script type="text/x-magento-init">
+{
+  "[data-role=cart-fiddle]": {
+    "Magento_Ui/js/core/app": {"components":{"cart-fiddle":{"component":"Bronto_Cart\/js\/fiddle"}}}  }
+}
+</script><div class="block block-bta" data-bind="scope: 'bta'" data-role="bta" style="display: none;">
+    <div data-bind="btaBinding: bta()"></div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "[data-role=bta]": {
+            "Magento_Ui/js/core/app": {"components":{"bta":{"component":"Bronto_Order\/js\/view\/bta"}}}        }
+    }
+</script></div></div><footer class="page-footer"><script type="text/javascript">
+     require([
+        'baCore',
+//        'baSuperSelects',
+        'baResponsiveNote'
+    ]);
+</script><div class="footer-top"><div class="footer-top-content"><div class="footer-social-media-container" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: center; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; text-align: center;"><div class="footer-social-media" data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="" title="Facebook" class="footer-social-media-item"></a>
+<a href="" title="Pinterest" class="footer-social-media-item"></a>
+<a href="" title="Twitter" class="footer-social-media-item"></a>
+<a href="" title="YouTube" class="footer-social-media-item"></a>
+<a href="" title="Instagram" class="footer-social-media-item"></a></div></div><div class="block newsletter">
+    <div class="title"><strong>Newsletter</strong></div>
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            action="https://www.reeds.com/newsletter/subscriber/new/"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <div class="control">
+                    <label for="newsletter">
+                        <span class="label">
+                            Sign Up for Our Newsletter:                        </span>
+                        <input name="email" type="email" id="newsletter"
+                               placeholder="Exclusive&#x20;Offers&#x3A;&#x20;Enter&#x20;Email"
+                               data-mage-init='{"mage/trim-input":{}}'
+                               data-validate="{required:true, 'validate-email':true}"
+                        />
+                    </label>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="action subscribe primary"
+                        title="Subscribe"
+                        type="submit"
+                        aria-label="Subscribe">
+                    <span>Subscribe</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</div></div><div class="footer-main"><div class="footer-main-content"><img class="footer-logo" src="/pub/media/wysiwyg/footer/footer_logo.png" alt="REEDS Logo">
+<div data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px;"><div class="footer-links-container" data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><div class="footer-link-wrapper footer-link-contact-us">
+    <div class="footer-link-heading"><a href="contacting-reeds-jewelers.html">Contact Us</a></div>
+    <ul class="footer-links">
+        <li><a class="footer-contact-call" href="tel:844-REEDS-40">Call us at 844-REEDS-40</a></li>
+        <li><a class="footer-contact-email" href="mailto:service@reeds.com">Email us at service@reeds.com</a></li>
+        <li><a class="footer-contact-chat" href="#" data-show-chat="true">Chat with an Expert</a></li>
+        <li><a class="footer-contact-store" href="/reeds-locations/">Find a REEDS Store</a></li>
+    </ul>
+</div>
+<div class="footer-link-wrapper">
+    <div class="footer-link-heading"><a href="about-reeds-jewelers.html">Our Family</a></div>
+    <ul class="footer-links">
+        <li><a href="/about-reeds-jewelers.html#history">Our Story</a></li>
+        <li><a href="/about-reeds-jewelers.html#our_people">Our People</a></li>
+        <li><a href="http://reeds.jobs/#home">Careers</a></li>
+        <li><a href="/education.html">Education</a></li>
+    </ul>
+</div>
+<div class="footer-link-wrapper">
+    <div class="footer-link-heading"><a href="reeds-credit-card.html">REEDS Credit Card</a></div>
+    <ul class="footer-links">
+        <li><a href="/reeds-credit-card.html">REEDS Rewards</a></li>
+        <li><a href="https://www.mysynchrony.com/mysyf/cmp-index.html?market=jewelry&store=reedsjewelers">Make a Payment</a></li>
+        <li><a href="https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=44A545926B51E3BC6EC397493C4698553B7FBC208F5D2660&client=REEDS%20Jewelers">Apply for a REEDS Card</a></li>
+    </ul>
+</div>
+<div class="footer-link-wrapper">
+    <div class="footer-link-heading"><a href="orders-shipping.html">Shipping & Returns</a></div>
+    <ul class="footer-links">
+        <li><a href="/orders-shipping.html#shippingAndDeliveryOptions">Shipping Policy</a></li>
+        <li><a href="/returns-exchanges.html#noRiskGuarantee">Returns and Exchanges</a></li>
+        <li><a href="/customer-care/order-status.html">Order Status</a></li>
+        <li><a href="/faqs.html">FAQ</a></li>
+        <li><a href="/orders-shipping.html#shippingAndDeliveryOptions">Shoprunner Shipping</a></li>
+    </ul>
+</div>
+<div class="footer-link-wrapper">
+    <div class="footer-link-heading">Service</div>
+    <ul class="footer-links">
+        <li><a href="/reeds-gift-card.html">REEDS Gift Cards</a></li>
+        <li><a href="/care-plans.html#jewelry_plan">Care Plans</a></li>
+        <li><a href="/gold-buying.html">Sell Your Gold & Silver</a></li>
+        <li><a href="/progressive-no-credit-needed.html">Progressive Leasing</a></li>
+        <li><a href="/affirm-financing.html">Affirm Financing</a></li>
+    </ul>
+</div></div></div></div></div><div class="footer-bottom"><div class="footer-bottom-content"><div class="footer-badges" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll;"><figure class="footer-badge" data-content-type="image" data-appearance="full-width" data-element="main" style="border-style: none;"><a href="http://www.bbb.org/myrtle-beach/business-reviews/jewelers-retail/reeds-jewelers-in-wilmington-nc-11002451#sealclick" target="_blank" data-link-type="default" title="Click for the Business Review of Reeds Jewelers, a Jewelers - Retail in Wilmington NC" data-element="link"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/footer/bbb_logo_gray.png" alt="Reeds Jewelers is a BBB Accredited Business. Click for the BBB Business Review of this Jewelers - Retail in Wilmington NC" title="Click for the Business Review of Reeds Jewelers, a Jewelers - Retail in Wilmington NC" data-element="desktop_image" style="max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/footer/bbb_logo_gray.png" alt="Reeds Jewelers is a BBB Accredited Business. Click for the BBB Business Review of this Jewelers - Retail in Wilmington NC" title="Click for the Business Review of Reeds Jewelers, a Jewelers - Retail in Wilmington NC" data-element="mobile_image" style="max-width: 100%; height: auto;"></a></figure><div class="footer-badge footer-badge-mcafee footer-badges-divide" data-content-type="html" data-appearance="default" data-element="main" data-decoded="true"><a href="https://www.mcafeesecure.com/RatingVerify?ref=www.reeds.com" target="_blank"><img width="169" height="44" src="//images.scanalert.com/meter/www.reeds.com/32.gif" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee SECURE is a Trademark of McAfee, Inc.'); return false;"></a>
+</div><figure class="footer-badge" data-content-type="image" data-appearance="full-width" data-element="main" style="border-style: none;"><a href="http://www.gia.edu/" target="_blank" data-link-type="default" title="Member of the Gemological Institute of America" data-element="link"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/footer/gia_logo_gray.png" alt="We are a proud member of the Gemological Institute of America." title="Member of the Gemological Institute of America" data-element="desktop_image" style="max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/footer/gia_logo_gray.png" alt="We are a proud member of the Gemological Institute of America." title="Member of the Gemological Institute of America" data-element="mobile_image" style="max-width: 100%; height: auto;"></a></figure><figure class="footer-badge" data-content-type="image" data-appearance="full-width" data-element="main" style="border-style: none;"><a href="http://www.jvclegal.org/" target="_blank" data-link-type="default" title="Member of the Jewelers Vigilance Committee" data-element="link"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/footer/jvc_logo_gray.png" alt="We are a proud member of the Jewelers Vigilance Committee, the jewelry industry's guardian group of ethics and integrity." title="Member of the Jewelers Vigilance Committee" data-element="desktop_image" style="max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/footer/jvc_logo_gray.png" alt="We are a proud member of the Jewelers Vigilance Committee, the jewelry industry's guardian group of ethics and integrity." title="Member of the Jewelers Vigilance Committee" data-element="mobile_image" style="max-width: 100%; height: auto;"></a></figure><figure class="footer-badge" data-content-type="image" data-appearance="full-width" data-element="main" style="border-style: none;"><a href="http://www.jewelers.org/" target="_blank" data-link-type="default" title="Member of the Jewelers of America" data-element="link"><img class="pagebuilder-mobile-hidden" src="https://www.reeds.com/pub/media/wysiwyg/footer/joa_logo_gray.png" alt="We are a proud member of the Jewelers of America" title="Member of the Jewelers of America" data-element="desktop_image" style="max-width: 100%; height: auto;"><img class="pagebuilder-mobile-only" src="https://www.reeds.com/pub/media/wysiwyg/footer/joa_logo_gray.png" alt="We are a proud member of the Jewelers of America" title="Member of the Jewelers of America" data-element="mobile_image" style="max-width: 100%; height: auto;"></a></figure></div></div></div><div class="footer-bar"><div class="footer-bar-content"><div class="footer-copyright">&copy; 1946 - 2020 REEDS Jewelers, Inc. All Rights Reserved</div>
+<div class="footer-links-minor" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll;"><div data-content-type="text" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px;"><p>
+    <a href="/terms-of-use.html">Terms of Use</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/site-map.html">Site Map</a>
+</p></div></div></div></div>
+<script type="text/x-magento-init">
+    {
+        ".footer-links-container": {
+            "Magento_Theme/js/footer-accordion-toggling": {}
+        }
+    }
+</script>
+</footer><script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "storage-manager": {
+                            "component": "Magento_Catalog/js/storage-manager",
+                            "appendTo": "",
+                            "storagesConfiguration" : {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/www.reeds.com\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/www.reeds.com\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/www.reeds.com\/rest\/default\/V1\/products-render-info"},"allowToSendRequest":null}}                        }
+                    }
+                }
+            }
+        }
+</script>
+
+
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "sessionTimeout": {
+                "cookieGetUrl" : "https://www.reeds.com/account/get/sessioncookie/",
+                "extendButtonSelector" : ".button.extend-session",
+                "cmsPopupUrl": "https://www.reeds.com/kadro/rest/getcmspopup/blockId/session-about-to-expire",
+                "cmsReplacePopupUrl": "https://www.reeds.com/kadro/rest/getcmspopup/blockId/session-expired",
+                "cookieResetUrl" : "https://www.reeds.com/account/get/sessioncookiereset",
+                "warningMilliseconds" : 60000
+            }
+        }
+    }
+</script>    <script type="text/javascript">
+        (function () {
+            function riskifiedBeaconLoad() {
+                jQuery.ajax(
+                    "https://www.reeds.com/decider/response/session/", {
+                        success : function(response) {
+                            var session_id = response.session_id;
+
+                            if(!session_id) {
+                                return false;
+                            }
+
+                            var store_domain = "reeds_m2.com";
+                            var version = "1.0.0";
+
+                            var url = ('https:' == document.location.protocol ? 'https://' : 'http://')
+                                + "beacon.riskified.com?shop=" + store_domain
+                                + "&sid=" + session_id
+                                + "&v=" + version;
+
+                            var s = document.createElement('script');
+                            s.type = 'text/javascript';
+                            s.async = true;
+                            s.src = url;
+                            var x = document.getElementsByTagName('script')[0];
+                            x.parentNode.insertBefore(s, x);
+                        }
+                    }
+                );
+            }
+
+            if(window.attachEvent) {
+                window.attachEvent('onload', riskifiedBeaconLoad)
+            } else{
+                window.addEventListener('load', riskifiedBeaconLoad, false);
+            }
+        })();
+    </script>
+
+<script>
+    document.addEventListener('RfkWdgtCrtd', function (e) {
+        if (typeof e.detail === 'undefined' || typeof e.detail.rfk_id === 'undefined') {
+            return;
+        }
+
+        var result = document.querySelectorAll('[data-rfkid="' + e.detail.rfk_id + '"]');
+
+        if (result.length === 0 || !result[0]) {
+            return;
+        }
+
+        result[0].classList.add('rfk-initialized');
+
+        var event;
+        // IE support
+        if (typeof(Event) === 'function') {
+            event = new Event('rfk-initialized', { 'bubbles': true, 'cancelable': false });
+        } else {
+            event = document.createEvent('Event');
+            event.initEvent('rfk-initialized', true, false);
+        }
+
+        result[0].dispatchEvent(event);
+    }, false);
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "kadro-reflektion-init": {}
+        }
+    }
+</script>
+
+<script type="text/x-magento-init">
+    {
+        ".ajax-popup": {
+            "kadroPopup": {
+                "type" : "ajax",
+                "baseUrl": "https://www.reeds.com/kadro/rest/getcmspopup/blockId/"
+            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        ".cms-expandable-section": {
+            "kadroExpandable": {}
+        }
+    }
+</script>    <script>
+        // session will listen for the event server side, and add the event to be triggered to the session event list.
+        // Once triggered, a call will be made to the server to remove the event from the session's event list.
+        // this is used for add-to-cart (a2c) and customer-login but could potentially be used for any server side event.
+        require(['jquery','mage/url'], function($, url){
+            $(function(){
+                var flushEvents = function() {
+                    $.ajax({
+                        url: url.build('/kadrorfk/event/getall'),
+                        type: "POST"
+                    }).done(function(data){
+                        $(data).each(function(idx,event){
+                            if (typeof rfk !== 'undefined') {
+                                rfk.push(['trackEvent', event]);
+                            }
+                        });
+                    });
+                };
+                flushEvents();
+                $(document).on('ajax:addToCart', function (event) {
+                    flushEvents();
+                });
+            });
+        });
+    </script>
+</div>    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"08bb212b3e","applicationID":"161832586","transactionName":"ZQRQNkMCX0FTAEEKV1xOcwFFCl5cHQBYEBdCAFUHHhVYV0U=","queueTime":0,"applicationTime":741,"atts":"SUNTQAsYTE8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
